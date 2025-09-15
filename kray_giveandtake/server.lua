@@ -1,6 +1,3 @@
--- server.lua
--- This script must run on the server side
-
 local QBCore = exports['qb-core']:GetCoreObject()
 
 -- Loop through each item defined in the config file
