@@ -13,6 +13,6 @@ server_scripts {
 }
 
 dependencies {
-    'qbx_core',
+    'qb-core',
     'ox_inventory'
 }
