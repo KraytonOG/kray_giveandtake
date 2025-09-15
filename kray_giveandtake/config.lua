@@ -1,8 +1,5 @@
--- config.lua
 Config = {}
 
--- Define a table of items that can be used.
--- Format: ['item_name_to_use'] = { removeItem = 'item_to_remove', giveItem = 'item_to_give' }
 -- This setup assumes the item to be removed is the same as the item being used.
 Config.UsableItems = {
     -- Example 1: Use a 'first_aid_kit' and get a 'bandage'
