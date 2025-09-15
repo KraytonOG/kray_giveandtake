@@ -1,6 +1,5 @@
 Config = {}
 
--- This setup assumes the item to be removed is the same as the item being used.
 Config.UsableItems = {
     -- Example 1: Use a 'first_aid_kit' and get a 'bandage'
     ['first_aid_kit'] = {
