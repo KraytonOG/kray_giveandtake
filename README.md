@@ -6,4 +6,5 @@ I recently added qb progressbar support so please note that this script requires
 
 You can view a preview of how this script works here.
 
-![a670op](https://github.com/user-attachments/assets/41829448-361f-43aa-b711-bee3e2dd25da)
+
+![a6792s](https://github.com/user-attachments/assets/2cdff8d1-375c-4fa0-af51-d8bb49534ea7)
