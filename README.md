@@ -1,6 +1,8 @@
 Here is a free version of my giveandtake script.
 
-I specifically made this script for my White Widow shop in KrayRP however I figured I'd make a config file so I can add more things. Soon I do plan on adding a progress bar, this will come in the next update.
+I specifically made this script for my White Widow shop in KrayRP however I figured I'd make a config file so I can add more things.
+
+I recently added qb progressbar support so please note that this script requires qb progressbar. You can find that here: https://github.com/qbcore-framework/progressbar
 
 You can view a preview of how this script works here.
 
