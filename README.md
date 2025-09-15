@@ -1,6 +1,6 @@
 Here is a free version of my giveandtake script.
 
-I specifically made this script for my White Widow shop in KrayRP however I figured I'd make a config file so I can add more things.
+I specifically made this script for my White Widow shop in KrayRP however I figured I'd make a config file so I can add more things than just a weed package.
 
 I recently added qb progressbar support so please note that this script requires qb progressbar. You can find that here: https://github.com/qbcore-framework/progressbar
 
