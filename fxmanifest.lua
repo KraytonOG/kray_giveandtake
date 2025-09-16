@@ -18,5 +18,5 @@ server_scripts {
 dependencies {
     'qbx_core',
     'ox_inventory',
-    'ox_lib'
+    'progressbar'
 }
