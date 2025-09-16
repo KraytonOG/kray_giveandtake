@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'KraytonOG'
 description 'A simple resource for giving an item upon using it with progress bars'
-version '1.0.6'
+version '1.0.8'
 
 shared_script 'config.lua'
 
