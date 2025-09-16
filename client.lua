@@ -32,10 +32,10 @@ RegisterNetEvent('kray_giveandtake:client:startProgress', function(itemData)
 
         exports['progressbar']:Progress(progressOptions, function(cancelled)
             if not cancelled then
-                print('Debug: Progress bar completed. Firing server event to finish use.')
+               -- print('Debug: Progress bar completed. Firing server event to finish use.')
                 TriggerServerEvent('kray_giveandtake:server:finishUse', itemData)
             else
-                print('Debug: Progress bar was cancelled or failed.')
+              -- print('Debug: Progress bar was cancelled or failed.')
                 QBCore:Notify('Item use cancelled.', 'error')
             end
         end)
