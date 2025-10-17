@@ -42,15 +42,11 @@ RegisterServerEvent('kray_giveandtake:server:finishUse', function(itemData)
     local itemToRemove = itemData.itemToRemove
     local countToRemove = itemData.countToRemove or 1
 
-    print('^3[kray_giveandtake] Server finishUse event received from player: ' .. src .. '^7')
-
     -- Re-validate the item count just before removing it
     if ox_inventory:GetItemCount(src, itemToRemove) >= countToRemove then
         local removed = ox_inventory:RemoveItem(src, itemToRemove, countToRemove)
 
         if removed then
-            print('^2[kray_giveandtake] Successfully removed ' .. countToRemove .. 'x ' .. itemToRemove .. '^7')
-            
             -- Give the new items and prepare the notification string
             local receivedItems = {}
             if itemData.itemsToGive then
@@ -58,7 +54,6 @@ RegisterServerEvent('kray_giveandtake:server:finishUse', function(itemData)
                     ox_inventory:AddItem(src, itemToGive.name, itemToGive.count)
                     local giveItemLabel = ox_inventory:Items(itemToGive.name) and ox_inventory:Items(itemToGive.name).label or itemToGive.name
                     table.insert(receivedItems, tostring(itemToGive.count) .. 'x ' .. giveItemLabel)
-                    print('^2[kray_giveandtake] Added ' .. itemToGive.count .. 'x ' .. itemToGive.name .. '^7')
                 end
             end
 
@@ -72,11 +67,9 @@ RegisterServerEvent('kray_giveandtake:server:finishUse', function(itemData)
 
             SendNotification(src, message, 'success', itemData.notificationSettings)
         else
-            print('^1[kray_giveandtake] Failed to remove item^7')
             SendNotification(src, 'Failed to remove item. Please try again.', 'error', nil)
         end
     else
-        print('^1[kray_giveandtake] Player no longer has required items^7')
         SendNotification(src, 'Action failed: You no longer have the required item. This attempt has been logged.', 'error', nil)
     end
 end)
@@ -86,22 +79,17 @@ print('^2[kray_giveandtake] Registering usable items...^7')
 for usedItemName, itemData in pairs(Config.UsableItems) do
     QBCore:CreateUseableItem(usedItemName, function(source, item)
         local src = source
-        print('^2[kray_giveandtake] Item used by player: ' .. src .. ' | Item: ' .. usedItemName .. '^7')
-        
         local itemToRemove = itemData.itemToRemove
         local countToRemove = itemData.countToRemove or 1
 
         -- Only check for item existence; removal happens after progress bar
         local itemCount = ox_inventory:GetItemCount(src, itemToRemove)
-        print('^3[kray_giveandtake] Player has ' .. itemCount .. ' of ' .. itemToRemove .. ' (needs ' .. countToRemove .. ')^7')
         
         if itemCount >= countToRemove then
-            print('^2[kray_giveandtake] Triggering client progress for player: ' .. src .. '^7')
             -- Add the item label to itemData
             itemData.label = item.label
             TriggerClientEvent('kray_giveandtake:client:startProgress', src, itemData)
         else
-            print('^1[kray_giveandtake] Player does not have enough items^7')
             SendNotification(src, 'You do not have enough ' .. item.label .. ' to use this.', 'error', nil)
         end
     end)
