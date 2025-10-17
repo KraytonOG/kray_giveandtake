@@ -1,5 +1,11 @@
 Config = {}
 
+-- Choose your progress bar system: 'ox_lib' or 'lation_ui'
+Config.ProgressBar = 'lation_ui' -- Options: 'ox_lib', 'lation_ui'
+
+-- Choose your notification system: 'qbcore', 'ox_lib' or 'lation_ui'
+Config.Notification = 'lation_ui' -- Options: 'qbcore', 'ox_lib', 'lation_ui'
+
 Config.UsableItems = {
     ['weed_whitewidow_bag'] = {
         itemToRemove = 'weed_whitewidow_bag',
