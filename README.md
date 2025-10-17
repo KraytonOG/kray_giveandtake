@@ -1,8 +1,10 @@
-Here is a free version of my giveandtake script.
+Here is a **free** version of my giveandtake script.
 
 I specifically made this script for my White Widow shop in KrayRP however I figured I'd make a config file so I can add more things than just a weed package.
 
-I recently added qb progressbar support so please note that this script requires qb progressbar. You can find that here: https://github.com/qbcore-framework/progressbar
+**v1.1.0**
+- Replaced qb progressbar with ox_lib and added support for Lation's Modern UI, available here: https://lationscripts.com/product/modern-ui
+- Added configurable notification & progressbar options in the config
 
 You can view a preview of how this script works here.
 
